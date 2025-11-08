@@ -26,20 +26,12 @@ df_aps = load_aps(
     verbose=True
 )
 
-print("\n" + "="*60)
-print(f"🎯 APs cargados: {len(df_aps):,} registros")
-print("="*60)
-
 # Cargar Clientes (primeros 10 archivos)
 df_clients = load_clients(
     data_dir="data/clients",
     max_files=10,
     verbose=True
 )
-
-print("\n" + "="*60)
-print(f"🎯 Clientes cargados: {len(df_clients):,} registros")
-print("="*60)
 
 df_aps.head()
 print_dataset_summary(df_aps, "Access Points")
